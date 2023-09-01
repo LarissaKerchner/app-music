@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createUser } from '../../services/userAPI';
-import LoadingMessage from '../Loaging';
+import LoadingMessage from '../Loading';
 
 function Login() {
   const [name, setName] = useState('');

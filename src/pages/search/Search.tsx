@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
-import LoadingMessage from '../Loaging';
+import LoadingMessage from '../Loading';
 import { AlbumType } from '../../types';
 
 function Search() {
