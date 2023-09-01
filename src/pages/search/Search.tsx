@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import LoadingMessage from '../Loading';
 import { AlbumType } from '../../types';
@@ -62,12 +63,12 @@ function Search() {
             {albums.map((album) => (
               <li key={ album.collectionId }>
                 <p>{album.collectionName}</p>
-                <a
-                  href={ `/album/${album.collectionId}` }
+                <Link
+                  to={ `/album/${album.collectionId}` }
                   data-testid={ `link-to-album-${album.collectionId}` }
                 >
                   Ver Álbum
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
