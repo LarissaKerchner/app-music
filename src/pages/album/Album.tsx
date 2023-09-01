@@ -9,6 +9,7 @@ function Album() {
   const [albumInfo, setAlbumInfo] = useState<AlbumType | null>(null);
   const [songs, setSongs] = useState<SongType[]>([]);
   const [loading, setLoading] = useState(false);
+
   const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
@@ -16,8 +17,8 @@ function Album() {
     const getData = async () => {
       const data = await getMusics(id as string);
       if (data.length > 0) {
-        setAlbumInfo(data[0]);
-        setSongs(data.slice(1));
+        setAlbumInfo(data[0] as AlbumType);
+        setSongs(data.slice(1) as SongType[]);
       }
       setLoading(false);
     };
@@ -37,6 +38,7 @@ function Album() {
       {songs.map((song) => (
         <MusicCard
           key={ song.trackId }
+          trackId={ song.trackId }
           trackName={ song.trackName }
           previewUrl={ song.previewUrl }
         />
