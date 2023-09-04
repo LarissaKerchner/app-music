@@ -4,6 +4,7 @@ import getMusics from '../../services/musicsAPI';
 import LoadingMessage from '../Loading';
 import { AlbumType, SongType } from '../../types';
 import MusicCard from './MusicCard';
+import './Algum.css';
 
 function Album() {
   const [albumInfo, setAlbumInfo] = useState<AlbumType | null>(null);
@@ -28,9 +29,9 @@ function Album() {
   if (loading) return <LoadingMessage />;
 
   return (
-    <div>
+    <div className="album-list">
       {albumInfo && (
-        <div>
+        <div className="artist-album">
           <h3 data-testid="artist-name">{albumInfo.artistName}</h3>
           <h4 data-testid="album-name">{albumInfo.collectionName}</h4>
         </div>

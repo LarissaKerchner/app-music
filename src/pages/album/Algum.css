@@ -1,3 +1,43 @@
+.album-list {
+  align-items: center;
+  background-color: #ecedf315;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.artist-album {
+  margin-bottom: 9px;
+  text-align: center;
+  width: 90%;
+}
+
+.music-card {
+  align-items: center;
+  background-color: #ecedf315;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 10px;
+  padding: 7px 20px;
+  width: 60%;
+}
+
+.audio {
+  display: flex;
+  font-size: 18px;
+  height: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.favorite {
+  margin-left: 20px;
+}
+
 .hidden-checkbox {
   display: none;
 }
+

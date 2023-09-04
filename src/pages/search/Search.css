@@ -1,0 +1,80 @@
+.search-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 6px;
+}
+
+.input-search {
+  background-color: rgb(118, 119, 160);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  height: 25px;
+  margin-right: 10px;
+  width: 359px;
+}
+
+.input-search::placeholder {
+  color: rgb(212, 200, 184);
+}
+
+.btn-search {
+  background-color: cyan;
+  border: none;
+  box-shadow: 0 0 5px cyan , 0 0 20px cyan;
+  font-weight: 550;
+  height: 23px;
+  margin-top: 10px;
+  width: 95px;
+}
+
+.btn-search:hover {
+  box-shadow: 0 0 5px cyan , 0 0 25px cyan , 0 0 50px cyan , 0 0 100px cyan;
+
+}
+
+.list-music {
+  text-align: center;
+  width: 99.5%;
+
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+li {
+  background-color: rgba(141, 123, 206, 0.137);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 5px;
+  padding: 10px 5px;
+  width: 25%;
+}
+
+li a {
+  border: 1px solid #3498db;
+  border-radius: 7px;
+  color: rgb(146, 133, 170);
+  padding: 6px 5px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #3498db;
+}

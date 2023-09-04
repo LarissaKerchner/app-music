@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import searchAlbumsAPI from '../../services/searchAlbumsAPI';
 import LoadingMessage from '../Loading';
 import { AlbumType } from '../../types';
+import './Search.css';
 
 function Search() {
   const [text, setText] = useState('');
@@ -28,8 +29,8 @@ function Search() {
   }
 
   return (
-    <>
-      <form>
+    <div className="search-container">
+      <form className="form-container">
         {loading ? (
           <LoadingMessage />
         ) : (
@@ -39,12 +40,15 @@ function Search() {
               type="text"
               name="search"
               value={ text }
+              placeholder="Quem você quer ouvir?"
               onChange={ handleSearchChange }
+              className="input-search"
             />
             <button
               data-testid="search-artist-button"
               disabled={ search }
               onClick={ handleSearchClick }
+              className="btn-search"
             >
               Pesquisar
 
@@ -53,7 +57,7 @@ function Search() {
         )}
       </form>
       {albums.length > 0 ? (
-        <div>
+        <div className="list-music">
           <p>
             Resultado de álbuns de:
             {' '}
@@ -76,7 +80,7 @@ function Search() {
       ) : (
         <h3>Nenhum álbum foi encontrado</h3>
       )}
-    </>
+    </div>
   );
 }
 export default Search;
