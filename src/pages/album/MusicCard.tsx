@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { SongType } from '../../types';
 import checkedHeart from '../../images/checked_heart.png';
 import emptyHeart from '../../images/empty_heart.png';
+import { addSong } from '../../services/favoriteSongsAPI';
 
 import './Algum.css';
 
 function MusicCard({ trackId, trackName, previewUrl }:SongType) {
   const [isFavorite, setFavorite] = useState(false);
   const toggleFavorite = () => {
+    const addmusic = addSong;
     setFavorite(!isFavorite);
   };
   return (
