@@ -27,7 +27,7 @@ git clone <URL_do_repositório>
 ```
 3. Navegue até o diretório do projeto:
 ```
-cd trybetunes
+cd app-music
 ```
 4. Instale as dependências do projeto utilizando npm (ou yarn, se preferir):
 ```
